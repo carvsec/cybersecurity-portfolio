@@ -3,7 +3,7 @@
 ## Objetivos do Projeto
 
 ### Objetivo Principal
-Criar um ambiente de SOC completo com Wazuh SIEM para desenvolvimento de habilidades práticas em Defensive Security e servir como portfólio técnico.
+Criar um ambiente de SOC completo com Wazuh SIEM para desenvolvimento de habilidades práticas em Defensive Security.
 
 ### Objetivos Específicos
 Aprendizado Técnico
