@@ -120,29 +120,29 @@ Tools Mastered: 20+
 ## Career Objective
 
 ### Timeline 2026-2028
-2026: Student to SOC Aspirant
-- Build solid technical foundation
-- Develop GitHub portfolio
-- Obtain fundamental certifications
-- Secure first internship or junior position
+2026 Student to SOC Aspirant
+Build solid technical foundation
+Develop GitHub portfolio
+Obtain fundamental certifications
+Secure first internship or junior position
 
-2027: SOC Analyst Junior to Mid-Level
-- 6-12 months practical experience
-- Specialization in detection and threat hunting
-- Intermediate certifications
-- Script and automation development
+2027 SOC Analyst Junior to Mid-Level
+6 to 12 months practical experience
+Specialization in detection and threat hunting
+Intermediate certifications
+Script and automation development
 
-2028: SOC Analyst Mid-Level to Cyber Security Engineer
-- Transition to security engineering
-- Security solution architecture
-- Technical project leadership
-- Mentorship for new analysts
+2028 SOC Analyst Mid-Level to Cyber Security Engineer
+Transition to security engineering
+Security solution architecture
+Technical project leadership
+Mentorship for new analysts
 
 ### Current Target Positions
-- SOC Analyst Level 1 Junior
-- Cybersecurity Intern or Trainee
-- Security Operations Center Analyst
-- NOC Analyst with security focus
+SOC Analyst Level 1 Junior
+Cybersecurity Intern or Trainee
+Security Operations Center Analyst
+NOC Analyst with security focus
 
 ## Current Study Schedule
 
@@ -183,19 +183,19 @@ December:
 ## How This Portfolio Demonstrates Skills
 
 ### For Recruiters
-Continuous Learning: 60+ writeups demonstrate dedication
+Continuous Learning: 60 plus writeups demonstrate dedication
 Technical Capability: Log analysis, threat intelligence, tool proficiency
 Organization: Clear structure, complete documentation
 Proactivity: Independent studies, personal projects
 Technical Communication: Clear and detailed writeups
 
 ### Specific Skills Demonstrated
-1. Log Analysis: Windows Event Logs, firewall logs, system logs
-2. Threat Intelligence: IOC analysis, malware research, OSINT
-3. SIEM Tools: Wazuh, Splunk, Elastic basics
-4. Network Security: Packet analysis, protocol understanding
-5. Scripting: Python for automation, Bash for administration
-6. Methodologies: MITRE ATT&CK, Cyber Kill Chain, Pyramid of Pain
+Log Analysis: Windows Event Logs, firewall logs, system logs
+Threat Intelligence: IOC analysis, malware research, OSINT
+SIEM Tools: Wazuh, Splunk, Elastic basics
+Network Security: Packet analysis, protocol understanding
+Scripting: Python for automation, Bash for administration
+Methodologies: MITRE ATT&CK, Cyber Kill Chain, Pyramid of Pain
 
 ## Contact and Links
 

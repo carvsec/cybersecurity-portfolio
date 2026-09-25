@@ -10,12 +10,12 @@ LinkedIn: https://www.linkedin.com/in/pedroalvesc/
 Create a complete Security Operations Center environment using Wazuh open-source SIEM for monitoring, detection, and incident response. This project serves as a practical laboratory for developing Defensive Security skills and functions as a technical portfolio.
 
 ### Learning Objectives
-1. Implement and configure enterprise-grade SIEM using Wazuh
-2. Monitor heterogeneous systems including Windows and Linux
-3. Develop custom rules for threat detection
-4. Simulate real attacks and analyze detections
-5. Create security dashboards and reports
-6. Document processes for technical portfolio
+Implement and configure enterprise-grade SIEM using Wazuh
+Monitor heterogeneous systems including Windows and Linux
+Develop custom rules for threat detection
+Simulate real attacks and analyze detections
+Create security dashboards and reports
+Document processes for technical portfolio
 
 ## Environment Architecture
 
