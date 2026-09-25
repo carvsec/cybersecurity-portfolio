@@ -1,53 +1,226 @@
-# Writeups de Estudo, Segurança Defensiva e SOC
+# Cybersecurity Portfolio
 
-Registro dos meus estudos práticos em segurança, seguindo trilhas do TryHackMe e
-laboratórios próprios.
+Author: Pedro Carvalho  
+LinkedIn: https://www.linkedin.com/in/pedroalvesc/  
+Objective: SOC Analyst evolving to Cyber Security Engineer  
+Status: Cybersecurity student in career transition
 
-👤 Autor: Pedro Carvalho · [LinkedIn](https://www.linkedin.com/in/pedroalvesc/)
-🎯 Objetivo: Analista de SOC evoluindo para Cyber Security Engineer
+## About Me
 
----
+Cybersecurity student at Uninter with intensive focus on Defensive Security and SOC Operations. Currently transitioning into cybersecurity career, dedicating over five hours daily to practical studies on platforms like TryHackMe, development of homelab with Wazuh SIEM, and building documented technical portfolio.
 
-## ⭐ Destaques, comece por aqui
+### Education in Progress
+- Information Security - Uninter, started August 2026
+- Google Cybersecurity Professional Certificate - Coursera, completion expected October 2026
+- AWS Cloud Practitioner - AWS, completion expected November 2026
+- CompTIA Security+ - expected February 2027
 
-| Writeup | O que demonstra | MITRE ATT&CK |
-|---|---|---|
-| [Snort Challenge, criação e debug de regras IDS](writeups/snort-challenge-basics) | Escrita de regras Snort, detecção de exploits reais, troubleshooting | T1210 EternalBlue MS17-010, T1190 Log4Shell |
+### Technical Stack
+- SIEM: Wazuh homelab in development, Splunk and Elastic basics
+- Threat Intelligence: VirusTotal, OSINT, IOC analysis, threat hunting
+- Log Analysis: Windows Event Logs, Sysmon, firewall logs, Linux system logs
+- Network Security: Wireshark, Nmap, tcpdump, protocol analysis
+- Tools and Platforms: TryHackMe, LetsDefend, HackTheBox Blue Team
+- Programming and Scripting: Python for log analysis, Bash, PowerShell, SQL basics
 
-Neste laboratório escrevi regras de IDS com Snort do zero, cobrindo detecção de tráfego HTTP e FTP, identificação de arquivos por magic bytes e correção de erros de sintaxe. Depois apliquei regras contra capturas de exploits como EternalBlue e Log4Shell, cruzando os alertas com tcpdump e base64 pra confirmar manualmente o que cada regra encontrou. O foco foi entender a anatomia de uma regra e a diferença entre detectar um protocolo e detectar um evento específico dentro dele.
+## Projects in Development
 
-## 🛡️ Defensive Security e SOC
-- [SOC L1, Alert Triage](defensive-soc/23-alert-triage.md)
-- [SOC L1, Alert Reporting](defensive-soc/24-alert-reporting.md)
-- [Logs Fundamentals](defensive-soc/07-logs-fundamentals.md)
-- [Introdução a EDR](defensive-soc/17-intro-edr.md)
-- [Introdução a SOAR](defensive-soc/18-intro-soar.md)
-- [SOC Metrics](defensive-soc/26-soc-metrics.md) · [Workbooks e Lookups](defensive-soc/25-workbooks-lookups.md)
+### Wazuh SIEM Homelab
+Status: Planning phase, expected completion March 2027
 
-## 🔎 SIEM e Detecção
-- [Introdução a SIEM](siem-deteccao/08-siem.md)
-- [Splunk Basics](siem-deteccao/21-splunk-basics.md)
-- [Elastic Stack Basics](siem-deteccao/22-elastic-stack-basics.md)
-- [IDS e IPS Fundamentals](siem-deteccao/10-ids-ips-fundamentals.md)
-- [Firewall](siem-deteccao/09-firewall.md)
+Objective: Complete SOC environment with multi-system monitoring, threat detection, and simulated incident response.
 
-## 🧠 Frameworks
-- [Pyramid of Pain](frameworks/19-pyramid-of-pain.md)
-- [Cyber Kill Chain](frameworks/20-cyber-kill-chain.md)
+Technologies: Wazuh SIEM, Ubuntu Server, Windows 10, Metasploitable, Elastic Stack
+Current Progress: Initial planning, 5% complete
 
-## 🌐 Redes e Análise de Tráfego
-- [Networking, Concepts e Essentials](redes-trafego/networking-concepts-essentials.md)
-- [Networking, Core e Secure Protocols](redes-trafego/networking-core-secure-protocols.md)
-- [Wireshark Basics](redes-trafego/wireshark-basics.md) · [tcpdump Basics](redes-trafego/tcpdump-basics.md) · [Nmap Basics](redes-trafego/nmap-basics.md)
+View project documentation in the wazuh-homelab directory.
 
-## 🐧 Sistemas e Ferramentas
-- [Linux Fundamentals](sistemas-ferramentas/11-linux-fundamentals.md) · [Linux Shells](sistemas-ferramentas/12-linux-shells.md)
-- [Criptografia e Public Key](sistemas-ferramentas/03-cryptography-e-public-key.md) · [Hashing Basics](sistemas-ferramentas/07-hashing-basics-github.md)
-- [CyberChef](sistemas-ferramentas/cyberchef-basics.md) · [CAPA](sistemas-ferramentas/capa-basics.md) · [REMnux](sistemas-ferramentas/remnux-getting-started.md) · [FLARE VM](sistemas-ferramentas/13-flarevm-arsenal-of-tools.md)
+### Snort IDS Challenge
+Status: Completed
 
-## 🔓 Phishing e Vulnerabilidades
-- [Introdução a Phishing](phishing-vulnerabilidades/27-intro-phishing.md)
-- [Vulnerability Management](phishing-vulnerabilidades/11-vulnerability-management.md)
+Practical laboratory for writing Snort rules from scratch, covering HTTP/FTP traffic detection, file identification by magic bytes, and application against real exploits including EternalBlue and Log4Shell.
 
----
-_Em construção: writeups do meu home lab de detecção com Sysmon, SIEM e simulação de ataques._
+Demonstrated Skills: IDS rule writing, protocol analysis, troubleshooting, MITRE ATT&CK mapping
+
+## Certifications in Progress
+
+| Certification | Status | Expected | Platform |
+|---------------|--------|----------|----------|
+| Google Cybersecurity Certificate | In progress | October 2026 | Coursera |
+| AWS Cloud Practitioner | In progress | November 2026 | AWS |
+| CompTIA Security+ | Studies beginning | February 2027 | CompTIA |
+| TryHackMe SOC Path | 70% complete | November 2026 | TryHackMe |
+| LetsDefend Security Analyst | Planned | January 2027 | LetsDefend |
+
+## Technical Writeups Organized by Category
+
+### Defensive Security and SOC
+- SOC Level 1 Alert Triage - alert prioritization and initial analysis
+- SOC Level 1 Alert Reporting - incident documentation and reporting
+- Logs Fundamentals - log analysis foundations
+- Introduction to EDR - Endpoint Detection and Response
+- Introduction to SOAR - Security Orchestration, Automation and Response
+- SOC Metrics - SOC KPIs and metrics
+- Workbooks and Lookups - investigation techniques
+
+### SIEM and Detection
+- Introduction to SIEM - SIEM fundamental concepts
+- Splunk Basics - Splunk fundamentals
+- Elastic Stack Basics - Elasticsearch, Logstash, Kibana
+- IDS and IPS Fundamentals - Intrusion Detection and Prevention Systems
+- Firewall - firewall rules and log analysis
+
+### Threat Intelligence
+- Cyber Threat Intelligence - threat intelligence fundamentals
+- File and Hash Analysis - file and hash investigation
+- IP and Domain Intelligence - IP and domain investigation
+- Invite Only Investigation - practical AsyncRAT analysis case
+
+### Networking and Traffic Analysis
+- Networking Concepts and Essentials - network fundamentals
+- Networking Core and Secure Protocols - essential protocols
+- Wireshark Basics - packet analysis with Wireshark
+- tcpdump Basics - command line capture and analysis
+- Nmap Basics - network scanning and enumeration
+
+### Systems and Tools
+- Linux Fundamentals - essential commands and concepts
+- Linux Shells - Bash scripting and automation
+- Cryptography and Public Key - cryptography and public keys
+- Hashing Basics - cryptographic hashes and applications
+- CyberChef - encoding and decoding tool
+- CAPA - static malware analysis
+- REMnux - Linux distribution for malware analysis
+- FLARE VM - Windows environment for reverse engineering
+
+### Phishing and Vulnerabilities
+- Introduction to Phishing - phishing techniques and detection
+- Vulnerability Management - vulnerability management processes
+
+### Malware Forensics
+- Malware Classification - malware family classification
+- Introduction to Malware Analysis - basic static analysis
+- Living off the Land Attacks - LOLBins and evasion techniques
+- Shadowtrace Challenge - forensic analysis challenge
+
+### Frameworks
+- Pyramid of Pain - adversary detection framework
+- Cyber Kill Chain - attack stages model
+
+## Portfolio Statistics
+
+Total Writeups: 60+  
+Documented Study Hours: 300+  
+Technical Categories: 8  
+Platforms Used: TryHackMe, LetsDefend, HackTheBox  
+Active Projects: 2  
+Programming Languages: Python, Bash, PowerShell  
+Tools Mastered: 20+
+
+## Career Objective
+
+### Timeline 2026-2028
+2026: Student to SOC Aspirant
+- Build solid technical foundation
+- Develop GitHub portfolio
+- Obtain fundamental certifications
+- Secure first internship or junior position
+
+2027: SOC Analyst Junior to Mid-Level
+- 6-12 months practical experience
+- Specialization in detection and threat hunting
+- Intermediate certifications
+- Script and automation development
+
+2028: SOC Analyst Mid-Level to Cyber Security Engineer
+- Transition to security engineering
+- Security solution architecture
+- Technical project leadership
+- Mentorship for new analysts
+
+### Current Target Positions
+- SOC Analyst Level 1 Junior
+- Cybersecurity Intern or Trainee
+- Security Operations Center Analyst
+- NOC Analyst with security focus
+
+## Current Study Schedule
+
+### Daily Monday-Friday
+0900-1200: School Nuvem
+1200-1400: Gym and lunch
+1420-1930: Cybersecurity studies
+- 1420-1600: Google Cybersecurity Certificate
+- 1600-1730: TryHackMe SOC Path
+- 1730-1830: GitHub projects and Wazuh development
+- 1830-1930: LetsDefend and HackTheBox practice
+
+### Monthly Plan September-December 2026
+September:
+- Complete TryHackMe SOC1 Path
+- Continue Google Cybersecurity Certificate
+- Begin AWS Cloud Practitioner studies
+- Organize GitHub professionally
+
+October:
+- Complete Google Cybersecurity Certificate
+- Advance AWS Cloud Practitioner studies
+- Begin Wazuh Homelab detailed planning
+- Optimize LinkedIn profile
+
+November:
+- Take AWS Cloud Practitioner exam
+- Begin Wazuh Homelab Phase 1 installation
+- Start LetsDefend.io platform
+- Begin Security+ foundational studies
+
+December:
+- Security+ Domain 1-2 studies
+- Wazuh Homelab Phase 2 agent configuration
+- LetsDefend challenges
+- Apply for first internship positions
+
+## How This Portfolio Demonstrates Skills
+
+### For Recruiters
+Continuous Learning: 60+ writeups demonstrate dedication
+Technical Capability: Log analysis, threat intelligence, tool proficiency
+Organization: Clear structure, complete documentation
+Proactivity: Independent studies, personal projects
+Technical Communication: Clear and detailed writeups
+
+### Specific Skills Demonstrated
+1. Log Analysis: Windows Event Logs, firewall logs, system logs
+2. Threat Intelligence: IOC analysis, malware research, OSINT
+3. SIEM Tools: Wazuh, Splunk, Elastic basics
+4. Network Security: Packet analysis, protocol understanding
+5. Scripting: Python for automation, Bash for administration
+6. Methodologies: MITRE ATT&CK, Cyber Kill Chain, Pyramid of Pain
+
+## Contact and Links
+
+LinkedIn: https://www.linkedin.com/in/pedroalvesc/
+GitHub: https://github.com/carvsec
+
+## Highlights and Recognition
+
+60+ technical writeups documenting learning journey
+SOC Path 70% complete on TryHackMe
+Wazuh Homelab project in active development
+Documented and structured career transition
+Commitment to 5+ daily study hours
+
+## Final Notes
+
+This repository is a living portfolio of my cybersecurity learning. Each writeup represents hours of practical study, each project demonstrates applied skills, and each certification shows commitment to professional development.
+
+Next Updates:
+1. Complete Wazuh Homelab documentation
+2. Python SOC automation projects
+3. AWS and Security+ certifications
+4. Practical SOC experience through positions
+
+Last update: September 2026
+Next goal: Complete Google Cybersecurity Certificate by October 15, 2026
+
+Professional portfolio of Pedro Carvalho - Aspiring SOC Analyst

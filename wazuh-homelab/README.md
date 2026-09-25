@@ -1,253 +1,297 @@
-# 🔧 Wazuh SIEM Homelab - SOC Environment
+# Wazuh SIEM Homelab - SOC Environment
 
-**Status:** 🚧 Em construção | **Última atualização:** 25/09/2026  
-**Autor:** Pedro Carvalho | **LinkedIn:** [pedroalvesc](https://www.linkedin.com/in/pedroalvesc/)
+Status: In development  
+Last update: September 2026  
+Author: Pedro Carvalho  
+LinkedIn: https://www.linkedin.com/in/pedroalvesc/
 
-## 🎯 Objetivo do Projeto
+## Project Objective
 
-Criar um ambiente completo de Security Operations Center (SOC) utilizando Wazuh SIEM open-source para monitoramento, detecção e resposta a incidentes de segurança. Este projeto serve como laboratório prático para desenvolvimento de habilidades em Defensive Security.
+Create a complete Security Operations Center environment using Wazuh open-source SIEM for monitoring, detection, and incident response. This project serves as a practical laboratory for developing Defensive Security skills and functions as a technical portfolio.
 
-### 🎓 Objetivos de Aprendizado:
-1. Implementar e configurar um SIEM enterprise-grade (Wazuh)
-2. Monitorar múltiplos sistemas (Windows, Linux, Docker)
-3. Desenvolver regras personalizadas para detecção de ameaças
-4. Simular ataques reais e analisar detecções
-5. Criar dashboards e relatórios de segurança
-6. Documentar processos para portfólio técnico
+### Learning Objectives
+1. Implement and configure enterprise-grade SIEM using Wazuh
+2. Monitor heterogeneous systems including Windows and Linux
+3. Develop custom rules for threat detection
+4. Simulate real attacks and analyze detections
+5. Create security dashboards and reports
+6. Document processes for technical portfolio
 
-## 🏗️ Arquitetura do Ambiente
+## Environment Architecture
 
-```
-                    🌐 Internet
+Internet
+    |
+Firewall with UFW
+    |
+Wazuh Server           Workstations
+Ubuntu 22.04 LTS       Monitored Systems
+    |                       |
+Elastic Stack           Windows 10
+Wazuh Manager               Sysmon
+Wazuh Indexer               Wazuh Agent
+Wazuh Dashboard             Test Applications
                         |
-                🔒 Firewall (UFW)
+                        Ubuntu 22.04
+                            Wazuh Agent
+                            Common Services
+                            System Logs
                         |
-        ┌───────────────┴───────────────┐
-        │                               │
-    🖥️ Wazuh Server                 🖥️ Workstations
-    (Ubuntu 22.04 LTS)              (Monitoradas)
-        │                               │
-        ├── 📊 Elastic Stack            ├── 🪟 Windows 10
-        ├── 🛡️ Wazuh Manager            │   ├── Sysmon
-        ├── 🔍 Wazuh Indexer            │   ├── Wazuh Agent
-        └── 🎨 Wazuh Dashboard          │   └── Aplicações teste
-                                        │
-                                        ├── 🐧 Ubuntu 22.04
-                                        │   ├── Wazuh Agent
-                                        │   ├── Serviços comuns
-                                        │   └── Logs de sistema
-                                        │
-                                        └── 🐳 Metasploitable 3
-                                            ├── Vulnerabilidades
-                                            ├── Wazuh Agent
-                                            └── Serviços vulneráveis
-```
+                        Metasploitable 3
+                            Vulnerabilities
+                            Wazuh Agent
+                            Vulnerable Services
 
-## 📋 Roadmap do Projeto
+## Project Roadmap
 
-### FASE 1: PLANEJAMENTO E INSTALAÇÃO (Outubro 2024)
-- [x] **S1.1** - Planejamento de arquitetura e requisitos
-- [ ] **S1.2** - Configuração de VMs (Proxmox/VirtualBox)
-- [ ] **S1.3** - Instalação do Wazuh Server (Ubuntu)
-- [ ] **S1.4** - Configuração básica do Wazuh
+### Phase 1: Planning and Installation, October 2026
+Duration: 2 weeks
+Tasks:
+- Define objectives and scope
+- Plan technical architecture
+- Document hardware and software requirements
+- Create installation checklist
+- Configure virtualization environment
 
-### FASE 2: CONFIGURAÇÃO DE AGENTES (Novembro 2024)
-- [ ] **S2.1** - Instalação do Wazuh Agent no Windows 10
-- [ ] **S2.2** - Instalação do Wazuh Agent no Ubuntu
-- [ ] **S2.3** - Configuração do Sysmon no Windows
-- [ ] **S2.4** - Integração de logs do sistema
+Deliverables:
+- Complete planning documentation
+- Architecture diagram
+- Installation checklist
 
-### FASE 3: REGRAS E DETECÇÃO (Dezembro 2024)
-- [ ] **S3.1** - Configuração de regras padrão do Wazuh
-- [ ] **S3.2** - Desenvolvimento de regras personalizadas
-- [ ] **S3.3** - Configuração de alertas e notificações
-- [ ] **S3.4** - Criação de dashboards no Kibana
+### Phase 2: Basic Installation and Configuration, November 2026
+Duration: 3 weeks
+Tasks:
+- Install Wazuh Server on Ubuntu
+- Configure Wazuh Manager and Indexer
+- Install Wazuh Dashboard with Kibana
+- Configure access and authentication
+- Test basic installation
 
-### FASE 4: SIMULAÇÃO E ANÁLISE (Janeiro 2025)
-- [ ] **S4.1** - Simulação de ataques básicos
-- [ ] **S4.2** - Análise de logs e detecções
-- [ ] **S4.3** - Criação de relatórios de incidentes
-- [ ] **S4.4** - Otimização de regras baseada em resultados
+Deliverables:
+- Functional Wazuh Server
+- Accessible dashboard
+- Installation documentation
 
-### FASE 5: DOCUMENTAÇÃO FINAL (Fevereiro 2025)
-- [ ] **S5.1** - Documentação completa do ambiente
-- [ ] **S5.2** - Guias de instalação e configuração
-- [ ] **S5.3** - Casos de uso e exemplos práticos
-- [ ] **S5.4** - Lições aprendidas e próximos passos
+### Phase 3: Agent Integration, December 2026
+Duration: 3 weeks
+Tasks:
+- Install Wazuh Agent on Windows 10
+- Configure Sysmon on Windows
+- Install Wazuh Agent on Ubuntu
+- Configure Linux system logs
+- Test agent-server communication
 
-## 🛠️ Tecnologias Utilizadas
+Deliverables:
+- Two or more monitored systems
+- Log collection active
+- Dashboard with real data
 
-### 💻 Sistemas Operacionais:
-- **Wazuh Server:** Ubuntu 22.04 LTS
-- **Windows Client:** Windows 10/11 Pro
-- **Linux Client:** Ubuntu 22.04 LTS
-- **Target:** Metasploitable 3
+### Phase 4: Rules and Detection, January 2027
+Duration: 4 weeks
+Tasks:
+- Configure default Wazuh rules
+- Develop custom rules
+- Create alerts and notifications
+- Develop Kibana dashboards
+- Optimize configurations
 
-### 🔧 Ferramentas de Segurança:
-- **SIEM:** Wazuh 4.7+
-- **Endpoint Monitoring:** Wazuh Agent, Sysmon
-- **Visualização:** Kibana (Wazuh Dashboard)
-- **Log Management:** Elastic Stack
+Deliverables:
+- Functional custom rules
+- Informative dashboards
+- Configured alert system
 
-### ⚡ Virtualização:
-- Proxmox VE / VirtualBox / VMware
-- Vagrant para automação (opcional)
+### Phase 5: Simulation and Analysis, February 2027
+Duration: 3 weeks
+Tasks:
+- Simulate basic attacks
+- Analyze generated detections
+- Create incident reports
+- Adjust rules based on results
+- Optimize performance
 
-### 📝 Documentação:
-- Markdown para documentação
-- PlantUML para diagramas
-- Screenshots e gravações
+Deliverables:
+- Simulation reports
+- Detection analysis
+- Optimized rules
 
-## 📁 Estrutura do Repositório
+### Phase 6: Final Documentation, March 2027
+Duration: 2 weeks
+Tasks:
+- Complete all documentation
+- Create step-by-step guides
+- Develop specific tutorials
+- Document lessons learned
+- Prepare project presentation
 
-```
-wazuh-homelab/
-├── 📄 README.md                          # Este arquivo
-├── 📁 architecture/                      # Diagramas e planejamento
-│   ├── network-diagram.puml             # Diagrama de rede
-│   ├── system-requirements.md           # Requisitos do sistema
-│   └── installation-checklist.md        # Checklist de instalação
-├── 📁 installation/                      # Guias de instalação
-│   ├── wazuh-server/                    # Instalação do servidor
-│   ├── windows-agent/                   # Agente Windows
-│   ├── linux-agent/                     # Agente Linux
-│   └── sysmon-config/                   # Configuração do Sysmon
-├── 📁 configuration/                     # Arquivos de configuração
-│   ├── wazuh/                           # Configurações do Wazuh
-│   ├── rules/                           # Regras personalizadas
-│   ├── alerts/                          # Configuração de alertas
-│   └── dashboards/                      # Dashboards do Kibana
-├── 📁 simulation/                        # Simulações de ataque
-│   ├── attack-scenarios/                # Cenários de ataque
-│   ├── detection-analysis/              # Análise de detecções
-│   └── incident-reports/                # Relatórios de incidentes
-├── 📁 documentation/                     # Documentação completa
-│   ├── guides/                          # Guias passo a passo
-│   ├── tutorials/                       # Tutoriais específicos
-│   └── lessons-learned/                 # Lições aprendidas
-└── 📁 scripts/                          # Scripts de automação
-    ├── setup/                           # Scripts de setup
-    ├── monitoring/                      # Scripts de monitoramento
-    └── analysis/                        # Scripts de análise
-```
+Deliverables:
+- Complete documentation
+- Guides and tutorials
+- Project presentation
 
-## 🚀 Começando
+## Technologies Used
 
-### Pré-requisitos:
-1. **Hardware:**
-   - CPU: 4+ cores (8+ recomendado)
-   - RAM: 16GB+ (32GB recomendado)
-   - Storage: 100GB+ SSD
-   - Virtualization enabled (VT-x/AMD-V)
+### Operating Systems
+- Wazuh Server: Ubuntu 22.04 LTS
+- Windows Client: Windows 10 or 11 Pro
+- Linux Client: Ubuntu 22.04 LTS
+- Target: Metasploitable 3
 
-2. **Software:**
-   - Virtualizador (Proxmox, VirtualBox, VMware)
+### Security Tools
+- SIEM: Wazuh 4.7 or later
+- Endpoint Monitoring: Wazuh Agent, Sysmon
+- Visualization: Kibana with Wazuh Dashboard
+- Log Management: Elastic Stack
+
+### Virtualization
+- Proxmox VE, VirtualBox, or VMware
+- Vagrant for optional automation
+
+### Documentation
+- Markdown for documentation
+- PlantUML for diagrams
+- Screenshots and recordings
+
+## Repository Structure
+
+wazuh-homelab
+    README.md
+    architecture
+        network-diagram.puml
+        system-requirements.md
+        installation-checklist.md
+    installation
+        wazuh-server
+        windows-agent
+        linux-agent
+        sysmon-config
+    configuration
+        wazuh
+        rules
+        alerts
+        dashboards
+    simulation
+        attack-scenarios
+        detection-analysis
+        incident-reports
+    documentation
+        guides
+        tutorials
+        lessons-learned
+    scripts
+        setup
+        monitoring
+        analysis
+
+## Getting Started
+
+### Prerequisites
+1. Hardware:
+   - CPU: 4 or more cores, 8 recommended
+   - RAM: 16GB or more, 32GB recommended
+   - Storage: 100GB or more SSD
+   - Virtualization enabled
+
+2. Software:
+   - Virtualizer such as Proxmox, VirtualBox, or VMware
    - Ubuntu 22.04 ISO
    - Windows 10 ISO
    - Metasploitable 3 OVA
 
-3. **Conhecimentos:**
-   - Linux básico (terminal, pacotes, serviços)
-   - Redes básicas (IP, subnets, firewall)
-   - Conceitos básicos de segurança
+3. Knowledge:
+   - Basic Linux terminal, packages, services
+   - Basic networking including IP, subnets, firewall
+   - Basic security concepts
 
-### Instalação Rápida (Guia Resumido):
-```bash
-# 1. Instalar Ubuntu Server
-# 2. Instalar Wazuh via script oficial
-curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
-sudo bash wazuh-install.sh --generate-config-files
+### Quick Installation Guide
+1. Install Ubuntu Server
+2. Install Wazuh using official script:
+   curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+   sudo bash wazuh-install.sh --generate-config-files
+3. Install agents on monitored systems
+   Windows: Execute .msi installer
+   Linux: curl plus apt install
 
-# 3. Instalar agentes nos sistemas monitorados
-# Windows: Executar installer .msi
-# Linux: curl + apt install
-```
+## Project Metrics
 
-## 📊 Métricas do Projeto
+| Metric | Target Value | How to Measure |
+|--------|--------------|----------------|
+| Monitored Systems | 3 or more | Agents connected in dashboard |
+| Custom Rules | 10 or more | Active rules in Wazuh |
+| Installation Time | Less than 8 hours | First commit to functional system |
+| Simulated Attack Detection | 80% or more | Attacks detected versus simulated |
+| Response Time | Less than 30 minutes | Detection to initial analysis |
 
-| Métrica | Valor Alvo | Status |
-|---------|------------|---------|
-| Sistemas Monitorados | 3+ | ⏳ |
-| Regras Personalizadas | 10+ | ⏳ |
-| Simulações Realizadas | 5+ | ⏳ |
-| Detecções Efetivas | 90%+ | ⏳ |
-| Tempo de Resposta | < 1 hora | ⏳ |
-| Documentação Completa | 100% | ⏳ |
+## Implemented Use Cases
 
-## 🎯 Casos de Uso Implementados
+### 1. SSH Brute Force Detection
+- Rules for multiple SSH login attempts
+- Alerts after 5 failed attempts in 5 minutes
+- Automatic blocking via firewall integration
 
-### 1. **Detecção de Brute Force SSH**
-- Regras para múltiplas tentativas de login SSH
-- Alertas após 5 tentativas falhas em 5 minutos
-- Bloqueio automático via integração com firewall
+### 2. Malicious Process Monitoring
+- Detection of suspicious executables in Windows
+- Process creation monitoring
+- Alerts for known malicious processes
 
-### 2. **Monitoramento de Processos Maliciosos**
-- Detecção de executáveis suspeitos no Windows
-- Monitoramento de criação de processos
-- Alertas para processos conhecidos como maliciosos
+### 3. Windows Log Analysis
+- Critical Event IDs monitoring
+- Registry change detection
+- Suspicious user activity alerts
 
-### 3. **Análise de Logs do Windows**
-- Monitoramento de Event IDs críticos
-- Detecção de alterações no registro
-- Alertas para atividades suspeitas de usuários
+### 4. File Integrity Monitoring
+- FIM on critical directories
+- Unauthorized change detection
+- System integrity baseline
 
-### 4. **Monitoramento de Integridade de Arquivos**
-- FIM (File Integrity Monitoring) em diretórios críticos
-- Detecção de alterações não autorizadas
-- Baseline de integridade do sistema
+## Expected Results
 
-## 📈 Resultados Esperados
+### Technical
+1. Functional SOC environment with real-time monitoring
+2. Dashboard with complete environment visibility
+3. Detection rules covering common attacks
+4. Documented incident response process
 
-### Técnicos:
-1. Ambiente SOC funcional com monitoramento em tempo real
-2. Dashboard com visibilidade completa do ambiente
-3. Regras de detecção cobrindo ataques comuns
-4. Processo de resposta a incidentes documentado
+### Professional
+1. Demonstrable technical portfolio for recruiters
+2. Practical experience with enterprise-grade SIEM
+3. Log analysis and threat detection skills
+4. Documentation demonstrating technical capability
 
-### Profissionais:
-1. Portfólio técnico demonstrável para recrutadores
-2. Experiência prática com SIEM enterprise-grade
-3. Habilidades em análise de logs e detecção de ameaças
-4. Documentação que demonstra capacidade técnica
+## Contribution
 
-## 🤝 Contribuição
+This is a personal learning project, but suggestions are welcome. If you:
+- Found documentation errors
+- Have improvement suggestions
+- Know tools or technologies that could be added
 
-Este é um projeto pessoal de aprendizado, mas sugestões são bem-vindas! Se você:
-- Encontrou um erro na documentação
-- Tem uma sugestão de melhoria
-- Conhece uma ferramenta/tecnologia que poderia ser adicionada
+Please open an issue or contact via LinkedIn.
 
-Sinta-se à vontade para abrir uma issue ou entrar em contato via LinkedIn.
+## Useful Resources
 
-## 📚 Recursos Úteis
+### Official Documentation
+- Wazuh Documentation: https://documentation.wazuh.com/
+- Elasticsearch Guide: https://www.elastic.co/guide/
+- Kibana User Guide: https://www.elastic.co/guide/kibana/
 
-### Documentação Oficial:
-- [Wazuh Documentation](https://documentation.wazuh.com/)
-- [Elasticsearch Guide](https://www.elastic.co/guide/)
-- [Kibana User Guide](https://www.elastic.co/guide/kibana/)
+### Tutorials and Guides
+- Wazuh Installation Guide: https://documentation.wazuh.com/current/installation-guide/
+- Sysmon Configuration: https://github.com/SwiftOnSecurity/sysmon-config
+- MITRE ATT&CK Framework: https://attack.mitre.org/
 
-### Tutoriais e Guias:
-- [Wazuh Installation Guide](https://documentation.wazuh.com/current/installation-guide/)
-- [Sysmon Configuration](https://github.com/SwiftOnSecurity/sysmon-config)
-- [MITRE ATT&CK Framework](https://attack.mitre.org/)
+### Communities
+- Wazuh Discord: https://discord.gg/wazuh
+- Reddit r/Wazuh: https://www.reddit.com/r/Wazuh/
+- Stack Overflow Wazuh Tag: https://stackoverflow.com/questions/tagged/wazuh
 
-### Comunidades:
-- [Wazuh Discord](https://discord.gg/wazuh)
-- [Reddit r/Wazuh](https://www.reddit.com/r/Wazuh/)
-- [Stack Overflow - Wazuh Tag](https://stackoverflow.com/questions/tagged/wazuh)
+## License
 
-## 📄 Licença
+This project is for educational and portfolio purposes. All content is provided under MIT license.
 
-Este projeto é para fins educacionais e de portfólio. Todo o conteúdo é disponibilizado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+## Next Steps
+1. Configure virtualization environment
+2. Install Wazuh Server
+3. Document installation process
+4. Begin agent configuration
 
----
+Current Progress: Initial planning, 5% complete
 
-**🚀 Próximos Passos:** 
-1. Configurar ambiente de virtualização
-2. Instalar Wazuh Server
-3. Documentar processo de instalação
-4. Iniciar configuração de agentes
-
-**📅 Progresso Atual:** Planejamento inicial - 5% completo
-
-*Última atualização: 25/09/2026 - Fase de planejamento*
+Last update: September 2026 - Planning phase
