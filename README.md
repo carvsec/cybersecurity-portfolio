@@ -2,7 +2,6 @@
 
 Autor: Pedro Carvalho  
 LinkedIn: https://www.linkedin.com/in/pedroalvesc/  
-Objetivo: Analista de SOC evoluindo para Engenheiro de Segurança Cibernética  
 Status: Estudante de segurança cibernética em transição de carreira
 
 ## Sobre Mim
